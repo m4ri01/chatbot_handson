@@ -3,7 +3,7 @@
 ## Prerequisites
 To run this project, ensure you have the following installed:
 
-- **Python**: Version `3.11.9`
+- **Python**: Version >= `3.10.0`
 - **Required Libraries**:
 
 ```bash
