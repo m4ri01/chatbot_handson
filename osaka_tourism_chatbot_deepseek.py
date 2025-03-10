@@ -34,7 +34,7 @@ if 'pipeline_retrieve' not in st.session_state:
     pipeline_retrieve.add_component("embedder",SentenceTransformersTextEmbedder())
     pipeline_retrieve.add_component("retriever",MongoDBAtlasEmbeddingRetriever(document_store=st.session_state.document_store,top_k=5))
     pipeline_retrieve.add_component("builder",PromptBuilder(template=template))
-    pipeline_retrieve.add_component("generator",OllamaGenerator(model="llama3.2:1b",url="http://IP_ADDRESS:11434/api/generate",generation_kwargs={
+    pipeline_retrieve.add_component("generator",OllamaGenerator(model="deepseek-r1:1.5b",url="http://IP_ADDRESS:11434/api/generate",generation_kwargs={
         "num_predict":-2,
         "temperature":0.9,
     },timeout=1200))
